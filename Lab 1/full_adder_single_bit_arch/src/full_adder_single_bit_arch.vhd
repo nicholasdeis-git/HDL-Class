@@ -28,6 +28,6 @@ begin
   bv <= "0" & b;
   cinv <= "0" & cin;
   x  <= std_logic_vector (unsigned(av) + unsigned(bv) + unsigned(cinv));
-  sum  <= x(0);
-  cout <= x(1);
+  sum <= (a xor b) xor cin;
+  cout <= (a and b) or (b and cin) or (cin and a);
 end beh; 
