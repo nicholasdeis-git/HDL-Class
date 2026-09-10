@@ -1,7 +1,6 @@
 # do sim.do
-# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:14 on Sep 03,2026
+# Start time: 13:25:51 on Sep 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/full_adder_single_bit_arch.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -9,25 +8,25 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity full_adder_single_bit_beh
 # -- Compiling architecture beh of full_adder_single_bit_beh
-# End time: 14:13:14 on Sep 03,2026, Elapsed time: 0:00:00
+# End time: 13:25:51 on Sep 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:14 on Sep 03,2026
+# Start time: 13:25:51 on Sep 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/full_adder_single_bit_arch_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity full_adder_single_bit_arch_tb
 # -- Compiling architecture arch of full_adder_single_bit_arch_tb
-# End time: 14:13:14 on Sep 03,2026, Elapsed time: 0:00:00
+# End time: 13:25:51 on Sep 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" full_adder_single_bit_arch_tb 
-# Start time: 14:13:14 on Sep 03,2026
+# Start time: 13:25:53 on Sep 08,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.full_adder_single_bit_arch_tb(arch)
 # ** Warning: (vsim-3473) Component instance "uut : full_adder_single_bit_arch" is not bound.
 #    Time: 0 ps  Iteration: 0  Instance: /full_adder_single_bit_arch_tb File: ../src/full_adder_single_bit_arch_tb.vhd
-# End time: 14:17:36 on Sep 03,2026, Elapsed time: 0:04:22
+# End time: 13:26:28 on Sep 08,2026, Elapsed time: 0:00:35
 # Errors: 0, Warnings: 1
