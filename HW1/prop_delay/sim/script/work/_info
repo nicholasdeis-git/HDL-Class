@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/nickd/Git Docs/HDL-Class/HW1/prop_delay/sim/script
+Eprop_delay
+Z1 w1789589287
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8../../src/prop_delay.vhd
+Z5 F../../src/prop_delay.vhd
+l0
+L8
+V9<GG[ZZ5<A=W9Q:;iTS6W1
+!s100 1ZX=NI:<LX[AElU]jIaW^1
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1789653955
+!i10b 1
+Z8 !s108 1789653955.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|../../src/prop_delay.vhd|
+Z10 !s107 ../../src/prop_delay.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abeh
+R2
+R3
+DEx4 work 10 prop_delay 0 22 9<GG[ZZ5<A=W9Q:;iTS6W1
+l20
+L16
+VP2V0[7Q]SSJWXfHkz7b_71
+!s100 YLKOiKfILFazA[gj]PO9_1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eprop_delay_tb
+R1
+R2
+R3
+R0
+Z13 8../src/prop_delay_tb.vhd
+Z14 F../src/prop_delay_tb.vhd
+l0
+L8
+VA3<b179Af[n;<6>K<E0oG0
+!s100 U>zPbfPJWMHMjJQKW3bmZ3
+R6
+31
+Z15 !s110 1789653956
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|../src/prop_delay_tb.vhd|
+Z17 !s107 ../src/prop_delay_tb.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R3
+Z18 DEx4 work 13 prop_delay_tb 0 22 A3<b179Af[n;<6>K<E0oG0
+l25
+L11
+Z19 VEoPc;UV95caa3`27nT9TX3
+Z20 !s100 FVN59OEB=fMIoX0AC0i?m3
+R6
+31
+R15
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
