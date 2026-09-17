@@ -25,6 +25,7 @@ constant period     : time := 20ns;
 signal clk          : std_logic := '0';
 signal reset        : std_logic := '1';
 signal bcd          : std_logic_vector(3 downto 0) := "0000";
+signal seven_seg_out: std_logic_vector(6 downto 0) := "1111111";
 
 begin
 
@@ -61,6 +62,6 @@ uut: seven_seg
     clk            => clk,
     reset          => reset,
     bcd            => bcd,
-    seven_seg_out  => open
+    seven_seg_out  => seven_seg_out
   );
 end arch;

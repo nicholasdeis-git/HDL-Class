@@ -22,9 +22,9 @@ V8NKj9PJ4B?TK[zmA89l?X2
 !s100 ?Y:HlHD90Jj>:1IiZz^=[3
 Z7 OV;C;10.5b;63
 31
-Z8 !s110 1789675118
+Z8 !s110 1789675613
 !i10b 1
-Z9 !s108 1789675118.000000
+Z9 !s108 1789675613.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|../../src/seven_seg.vhd|
 Z11 !s107 ../../src/seven_seg.vhd|
 !i113 1
@@ -50,7 +50,7 @@ R11
 R12
 R13
 Eseven_seg_tb
-Z14 w1789675113
+Z14 w1789675606
 R2
 R3
 R4
@@ -76,10 +76,10 @@ R2
 R3
 R4
 Z19 DEx4 work 12 seven_seg_tb 0 22 =Fn8URJ<?]?=oFC]eNCod3
-l29
+l30
 L12
-Z20 VCHdVbL?A4MlX5^bNV483k2
-Z21 !s100 kT8cbTmhGc9=ELD:_f0L92
+Vef:42RX[mj1=<9@;c0icG2
+!s100 CNbmhZAjX;VmZNDaCo=nD2
 R7
 31
 R8

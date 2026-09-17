@@ -388,3 +388,205 @@ do sim.do
 #    Time: 0 ps  Iteration: 0  Instance: /seven_seg_tb
 # ** Note: ****************** sequential testbench stop ****************
 #    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:40 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 16:02:40 on Sep 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:40 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 16:02:40 on Sep 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 16:02:40 on Sep 17,2026, Elapsed time: 0:04:01
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" seven_seg_tb 
+# Start time: 16:02:40 on Sep 17,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+add wave -position insertpoint  \
+sim:/seven_seg_tb/seven_seg_out
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:55 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 16:02:55 on Sep 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:56 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 16:02:56 on Sep 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 16:02:56 on Sep 17,2026, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" seven_seg_tb 
+# Start time: 16:02:56 on Sep 17,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+add wave -position insertpoint  \
+sim:/seven_seg_tb/seven_seg_out
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:21 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 16:03:21 on Sep 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:21 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 16:03:21 on Sep 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 16:03:22 on Sep 17,2026, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" seven_seg_tb 
+# Start time: 16:03:22 on Sep 17,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+add wave -position insertpoint  \
+sim:/seven_seg_tb/seven_seg_out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/sim/script/wave.do}
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:04:00 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 16:04:00 on Sep 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:04:00 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 16:04:00 on Sep 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 16:04:01 on Sep 17,2026, Elapsed time: 0:00:39
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" seven_seg_tb 
+# Start time: 16:04:01 on Sep 17,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:06:53 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 16:06:53 on Sep 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:06:53 on Sep 17,2026
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 16:06:54 on Sep 17,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# End time: 16:06:54 on Sep 17,2026, Elapsed time: 0:02:53
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" seven_seg_tb 
+# Start time: 16:06:54 on Sep 17,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
