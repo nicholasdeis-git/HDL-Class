@@ -20,6 +20,14 @@ component seven_seg is
   );  
 end component; 
 
+component generic_counter is 
+  port (
+    clk             : in  std_logic; 
+    reset           : in  std_logic;
+    output          : out std_logic
+  );  
+ end component;
+
 signal output       : std_logic;
 constant period     : time := 20ns;                                              
 signal clk          : std_logic := '0';
@@ -64,4 +72,12 @@ uut: seven_seg
     bcd            => bcd,
     seven_seg_out  => seven_seg_out
   );
+  
+ uut2: generic_counter
+ port map(
+    clk    => clk,
+    reset  => reset,
+    output => output
+  );  
+  
 end arch;
