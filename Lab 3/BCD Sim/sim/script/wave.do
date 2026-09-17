@@ -13,12 +13,13 @@ radix define States {
     -default default
 }
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /seven_seg_tb/uut/clk
-add wave -noupdate /seven_seg_tb/uut/reset
-add wave -noupdate /seven_seg_tb/uut/bcd
-add wave -noupdate -radix States /seven_seg_tb/uut/seven_seg_out
+add wave -noupdate /seven_seg_tb/output
+add wave -noupdate /seven_seg_tb/clk
+add wave -noupdate /seven_seg_tb/reset
+add wave -noupdate /seven_seg_tb/bcd
+add wave -noupdate /seven_seg_tb/period
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {50000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {415357 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 177
 configure wave -valuecolwidth 40
