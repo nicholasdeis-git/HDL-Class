@@ -15,7 +15,9 @@ architecture beh of seven_seg is
 begin
 process(clk)
   begin 
-    if (clk'event and clk = '1') then
+    if (reset = '1') then 
+      seven_seg_out <= "1111111";
+    elsif (clk'event and clk = '1') then
 	case bcd is
       when "0000" => seven_seg_out <= "1000000";
 	  when "0001" => seven_seg_out <= "1111001";
