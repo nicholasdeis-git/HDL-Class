@@ -16,7 +16,7 @@ begin
 process(clk)
   begin 
     if (reset = '1') then 
-      seven_seg_out <= "1111111";
+      seven_seg_out <= "1111000";
     elsif (clk'event and clk = '1') then
 	case bcd is
       when "0000" => seven_seg_out <= "1000000";

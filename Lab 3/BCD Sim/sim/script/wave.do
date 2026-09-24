@@ -18,6 +18,8 @@ add wave -noupdate /seven_seg_tb/reset
 add wave -noupdate /seven_seg_tb/bcd
 add wave -noupdate -radix States /seven_seg_tb/seven_seg_out
 add wave -noupdate /seven_seg_tb/output
+add wave -noupdate /seven_seg_tb/sum
+add wave -noupdate /seven_seg_tb/cout
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {430015 ps} 0}
 quietly wave cursor active 1

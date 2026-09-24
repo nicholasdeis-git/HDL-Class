@@ -27,13 +27,28 @@ component generic_counter is
     output          : out std_logic
   );  
  end component;
+ 
+component generic_adder_beh is
+  port (
+    a       : in  std_logic_vector(3 downto 0);
+    b       : in  std_logic_vector(3 downto 0);
+    cin     : in  std_logic;
+    sum     : out std_logic_vector(3 downto 0);
+    cout    : out std_logic
+  );
+ end component;
 
 signal output       : std_logic;
-constant period     : time := 20ns;                                              
+constant period     : time := 20ns;   
+signal a : std_logic_vector(3 downto 0);
+signal b : std_logic_vector(3 downto 0);
+signal cin : std_logic;                                           
 signal clk          : std_logic := '0';
 signal reset        : std_logic := '1';
 signal bcd          : std_logic_vector(3 downto 0) := "0000";
 signal seven_seg_out: std_logic_vector(6 downto 0) := "1111111";
+signal sum          : std_logic_vector(3 downto 0);
+signal cout         : std_logic;
 
 begin
 
@@ -73,11 +88,19 @@ uut: seven_seg
     seven_seg_out  => seven_seg_out
   );
   
- uut2: generic_counter
- port map(
+uut2: generic_counter
+  port map(
     clk    => clk,
     reset  => reset,
     output => output
   );  
   
+uut3: generic_adder_beh
+  port map(
+    a     => a,
+    b     => b,
+    cin   => cin,
+    sum   => sum,
+    cout  => cout 
+  );
 end arch;

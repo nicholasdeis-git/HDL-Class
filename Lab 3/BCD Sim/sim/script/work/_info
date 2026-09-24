@@ -8,124 +8,165 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/sim/script
-Egeneric_counter
+Egeneric_adder_beh
 Z1 w1789663058
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8../src/generic_counter.vhd
-Z5 F../src/generic_counter.vhd
+Z5 8../src/generic_adder_beh.vhd
+Z6 F../src/generic_adder_beh.vhd
+l0
+L9
+VZM:m22W6n_OU0[flII;@<2
+!s100 OOaH7j]OJo2FNLlk`2n1j2
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1790083974
+!i10b 1
+Z9 !s108 1790083974.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|../src/generic_adder_beh.vhd|
+Z11 !s107 ../src/generic_adder_beh.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abeh
+R2
+R3
+R4
+Z14 DEx4 work 17 generic_adder_beh 0 22 ZM:m22W6n_OU0[flII;@<2
+l27
+L22
+Z15 VXiACzM[7Kd];V;iL`X2`K1
+Z16 !s100 J0QDzX5NX;aLCSO9EOMGC0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Egeneric_counter
+R1
+R3
+R4
+R0
+Z17 8../src/generic_counter.vhd
+Z18 F../src/generic_counter.vhd
 l0
 L8
 V^`<KMAE]`_5EGCAHV]bZ72
 !s100 b;7GBWdQ5cL8<UCk3lILB1
-Z6 OV;C;10.5b;63
+R7
 31
-Z7 !s110 1789678882
+R8
 !i10b 1
-Z8 !s108 1789678882.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|../src/generic_counter.vhd|
-Z10 !s107 ../src/generic_counter.vhd|
+R9
+Z19 !s90 -reportprogress|300|-93|-work|work|../src/generic_counter.vhd|
+Z20 !s107 ../src/generic_counter.vhd|
 !i113 1
-Z11 o-93 -work work
-Z12 tExplicit 1 CvgOpt 0
+R12
+R13
 Abeh
-R2
 R3
-Z13 DEx4 work 15 generic_counter 0 22 ^`<KMAE]`_5EGCAHV]bZ72
+R4
+DEx4 work 15 generic_counter 0 22 ^`<KMAE]`_5EGCAHV]bZ72
 l23
 L19
-Z14 VTT:M88V=lJ62fz0cSYdIR0
-Z15 !s100 z5ik>DVc6W0?c7LPT5hG52
-R6
-31
+VTT:M88V=lJ62fz0cSYdIR0
+!s100 z5ik>DVc6W0?c7LPT5hG52
 R7
-!i10b 1
+31
 R8
+!i10b 1
 R9
-R10
+R19
+R20
 !i113 1
-R11
 R12
+R13
 Eseven_seg
-Z16 w1789676753
-Z17 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z21 w1789676753
 R2
 R3
+R4
 R0
-Z18 8../../src/seven_seg.vhd
-Z19 F../../src/seven_seg.vhd
+Z22 8../../src/seven_seg.vhd
+Z23 F../../src/seven_seg.vhd
 l0
 L5
 V8NKj9PJ4B?TK[zmA89l?X2
 !s100 ?Y:HlHD90Jj>:1IiZz^=[3
-R6
-31
 R7
+31
+Z24 !s110 1790083973
 !i10b 1
-R8
-Z20 !s90 -reportprogress|300|-93|-work|work|../../src/seven_seg.vhd|
-Z21 !s107 ../../src/seven_seg.vhd|
+Z25 !s108 1790083973.000000
+Z26 !s90 -reportprogress|300|-93|-work|work|../../src/seven_seg.vhd|
+Z27 !s107 ../../src/seven_seg.vhd|
 !i113 1
-R11
 R12
+R13
 Abeh
-R17
 R2
 R3
+R4
 DEx4 work 9 seven_seg 0 22 8NKj9PJ4B?TK[zmA89l?X2
 l15
 L14
 VNbB?88B7HVSN;@TASQnSR2
 !s100 fTnG9J3fdCmZQ8;d6b7?>0
-R6
-31
 R7
+31
+R24
 !i10b 1
-R8
-R20
-R21
+R25
+R26
+R27
 !i113 1
-R11
 R12
+R13
 Eseven_seg_tb
-Z22 w1789678877
-R17
+Z28 w1789680415
 R2
 R3
+R4
 R0
-Z23 8../src/seven_seg_tb.vhd
-Z24 F../src/seven_seg_tb.vhd
+Z29 8../src/seven_seg_tb.vhd
+Z30 F../src/seven_seg_tb.vhd
 l0
 L9
 V=Fn8URJ<?]?=oFC]eNCod3
 !s100 <[]cRiH?Cjz[eK]hRnh^O3
-R6
-31
 R7
-!i10b 1
+31
 R8
-Z25 !s90 -reportprogress|300|-93|-work|work|../src/seven_seg_tb.vhd|
-Z26 !s107 ../src/seven_seg_tb.vhd|
+!i10b 1
+R9
+Z31 !s90 -reportprogress|300|-93|-work|work|../src/seven_seg_tb.vhd|
+Z32 !s107 ../src/seven_seg_tb.vhd|
 !i113 1
-R11
 R12
+R13
 Aarch
-R17
 R2
 R3
+R4
 DEx4 work 12 seven_seg_tb 0 22 =Fn8URJ<?]?=oFC]eNCod3
-l38
+l53
 L12
-VQ=gEgQLXR;oB_3QNP0[Al3
-!s100 g=JRF__<=G^<hMUH=SCVF2
-R6
-31
+V[4ACnP]NofP^ECJ35;V?A1
+!s100 Jb0;?afcCF@?R4EM?e`RU3
 R7
-!i10b 1
+31
 R8
-R25
-R26
+!i10b 1
+R9
+R31
+R32
 !i113 1
-R11
 R12
+R13
