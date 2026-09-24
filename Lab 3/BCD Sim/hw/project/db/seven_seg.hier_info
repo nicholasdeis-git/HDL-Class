@@ -1,7 +1,15 @@
 |sev_top
 clk => seven_seg:uut.clk
+clk => sum_sig[0].CLK
+clk => sum_sig[1].CLK
+clk => sum_sig[2].CLK
+clk => sum_sig[3].CLK
 clk => generic_counter:uut2.clk
 reset => seven_seg:uut.reset
+reset => sum_sig[0].ACLR
+reset => sum_sig[1].ACLR
+reset => sum_sig[2].ACLR
+reset => sum_sig[3].ACLR
 reset => generic_counter:uut2.reset
 seven_seg_out[0] <= seven_seg:uut.seven_seg_out[0]
 seven_seg_out[1] <= seven_seg:uut.seven_seg_out[1]
@@ -120,5 +128,22 @@ reset => count_sig[23].ACLR
 reset => count_sig[24].ACLR
 reset => count_sig[25].ACLR
 output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sev_top|generic_adder_beh:uut3
+a[0] => _.DATAD
+a[1] => _.DATAD
+a[2] => _.DATAD
+a[3] => _.DATAD
+b[0] => _.DATAC
+b[1] => _.DATAC
+b[2] => _.DATAC
+b[3] => _.DATAC
+cin => _.DATAB
+sum[0] <= _.SUM_OUT
+sum[1] <= _.SUM_OUT
+sum[2] <= _.SUM_OUT
+sum[3] <= _.SUM_OUT
+cout <= _.SUM_OUT
 
 

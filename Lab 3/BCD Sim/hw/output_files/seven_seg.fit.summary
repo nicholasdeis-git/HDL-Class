@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Sep 24 10:58:30 2026
+Fitter Status : Successful - Thu Sep 24 14:30:07 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 Revision Name : seven_seg
 Top-level Entity Name : sev_top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1 / 32,070 ( < 1 % )
-Total registers : 3
+Logic utilization (in ALMs) : 24 / 32,070 ( < 1 % )
+Total registers : 41
 Total pins : 9 / 457 ( 2 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

@@ -31,16 +31,30 @@ component generic_counter is
   );  
 end component;  
 
-signal enable : std_logic; 
-signal sum_sig : std_logic_vector(3 downto 0);
-signal sum : std_logic_vector(3 downto 0);
+component generic_adder_beh is
+  generic (
+    bits    : integer := 4
+  );
+  port (
+    a       : in  std_logic_vector(bits-1 downto 0);
+    b       : in  std_logic_vector(bits-1 downto 0);
+    cin     : in  std_logic;
+    sum     : out std_logic_vector(bits-1 downto 0);
+    cout    : out std_logic
+  );
+end component;
+
+constant NUM_BITS     : integer := 4;
+signal enable         : std_logic; 
+signal sum_sig        : std_logic_vector(3 downto 0);
+signal sum            : std_logic_vector(3 downto 0);
 
 begin
 
 uut: seven_seg
 port map(  
     clk            => clk,
-    bcd            => sum_sig, -- hard code "0001" to verify output
+    bcd            => sum_sig,
     reset          => reset,
     seven_seg_out  => seven_seg_out
   );
@@ -55,14 +69,26 @@ uut2: generic_counter
     output    => enable
   );
   
-  -- uut3 adder
+uut3: generic_adder_beh  
+  generic map (
+    bits => NUM_BITS
+  )
+  port map(
+    a       => sum_sig,
+    b       => "0001",
+    cin     => '0',
+    sum     => sum,
+    cout    => open
+  );
   
-  process(clk,reset)
+process(clk,reset)
   begin
     if (reset = '1') then 
       sum_sig <= "0000";
     elsif (clk'event and clk = '1') then
-        sum_sig <= sum; 
+		if (enable = '1') then
+            sum_sig <= sum; 
+		end if;
     end if;
   end process;
 end beh;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for seven_seg
-Thu Sep 24 10:57:11 2026
+Thu Sep 24 14:28:54 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -13,15 +13,14 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Parameter Settings for User Entity Instance: generic_counter:uut2
- 12. Port Connectivity Checks: "generic_counter:uut2"
- 13. Port Connectivity Checks: "seven_seg:uut"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Parameter Settings for User Entity Instance: generic_counter:uut2
+ 11. Parameter Settings for User Entity Instance: generic_adder_beh:uut3
+ 12. Port Connectivity Checks: "generic_adder_beh:uut3"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -48,13 +47,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 24 10:57:11 2026           ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 24 14:28:54 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; seven_seg                                       ;
 ; Top-level Entity Name           ; sev_top                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 3                                               ;
+; Total registers                 ; 38                                              ;
 ; Total pins                      ; 9                                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -164,22 +163,24 @@ on the Quartus Prime software download page.
 ; Maximum allowed            ; 14          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 14          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-14        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; ../../src/sev_top.vhd            ; yes             ; User VHDL File  ; C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd         ;         ;
-; ../../src/seven_seg.vhd          ; yes             ; User VHDL File  ; C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/seven_seg.vhd       ;         ;
-; ../../src/generic_counter.vhd    ; yes             ; User VHDL File  ; C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/generic_counter.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; ../../src/sev_top.vhd            ; yes             ; User VHDL File  ; C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd           ;         ;
+; ../../src/seven_seg.vhd          ; yes             ; User VHDL File  ; C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/seven_seg.vhd         ;         ;
+; ../../src/generic_counter.vhd    ; yes             ; User VHDL File  ; C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/generic_counter.vhd   ;         ;
+; ../../src/generic_adder_beh.vhd  ; yes             ; User VHDL File  ; C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/generic_adder_beh.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -187,48 +188,39 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 2         ;
+; Estimate of Logic utilization (ALMs needed) ; 24        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 0         ;
+; Combinational ALUT usage for logic          ; 42        ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 5         ;
 ;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 0         ;
+;     -- 4 input functions                    ; 7         ;
+;     -- <=3 input functions                  ; 30        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 3         ;
+; Dedicated logic registers                   ; 38        ;
 ;                                             ;           ;
 ; I/O pins                                    ; 9         ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 3         ;
-; Total fan-out                               ; 18        ;
-; Average fan-out                             ; 0.86      ;
+; Maximum fan-out                             ; 38        ;
+; Total fan-out                               ; 276       ;
+; Average fan-out                             ; 2.82      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
-; |sev_top                   ; 0 (0)               ; 3 (0)                     ; 0                 ; 0          ; 9    ; 0            ; |sev_top               ; sev_top     ; work         ;
-;    |seven_seg:uut|         ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |sev_top|seven_seg:uut ; seven_seg   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name       ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+-------------------+--------------+
+; |sev_top                    ; 42 (0)              ; 38 (4)                    ; 0                 ; 0          ; 9    ; 0            ; |sev_top                        ; sev_top           ; work         ;
+;    |generic_adder_beh:uut3| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sev_top|generic_adder_beh:uut3 ; generic_adder_beh ; work         ;
+;    |generic_counter:uut2|   ; 31 (31)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |sev_top|generic_counter:uut2   ; generic_counter   ; work         ;
+;    |seven_seg:uut|          ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |sev_top|seven_seg:uut          ; seven_seg         ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; seven_seg:uut|seven_seg_out[6]        ; Stuck at VCC due to stuck port data_in ;
-; seven_seg:uut|seven_seg_out[0..2]     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 4 ;                                        ;
-+---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -236,12 +228,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 38    ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Clear ; 38    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -254,7 +246,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; seven_seg:uut|seven_seg_out[3]         ; 1       ;
 ; seven_seg:uut|seven_seg_out[4]         ; 1       ;
 ; seven_seg:uut|seven_seg_out[5]         ; 1       ;
-; Total number of inverted registers = 3 ;         ;
+; seven_seg:uut|seven_seg_out[6]         ; 1       ;
+; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
 
 
@@ -268,22 +261,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "generic_counter:uut2"                                                                 ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generic_adder_beh:uut3 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; bits           ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------+
-; Port Connectivity Checks: "seven_seg:uut" ;
-+------+-------+----------+-----------------+
-; Port ; Type  ; Severity ; Details         ;
-+------+-------+----------+-----------------+
-; bcd  ; Input ; Info     ; Stuck at GND    ;
-+------+-------+----------+-----------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "generic_adder_beh:uut3"                                                                ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; b[3..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cin     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -291,16 +288,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 3                           ;
-;     CLR               ; 3                           ;
-; arriav_lcell_comb     ; 5                           ;
-;     normal            ; 5                           ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
+; arriav_ff             ; 38                          ;
+;     CLR               ; 8                           ;
+;     CLR SCLR          ; 26                          ;
+;     ENA CLR           ; 4                           ;
+; arriav_lcell_comb     ; 46                          ;
+;     arith             ; 26                          ;
+;         1 data inputs ; 26                          ;
+;     normal            ; 16                          ;
+;         1 data inputs ; 4                           ;
+;         4 data inputs ; 7                           ;
+;         6 data inputs ; 5                           ;
+;     shared            ; 4                           ;
+;         1 data inputs ; 4                           ;
 ; boundary_port         ; 9                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.60                        ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -319,7 +323,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Thu Sep 24 10:57:03 2026
+    Info: Processing started: Thu Sep 24 14:28:45 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off seven_seg -c seven_seg
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -336,32 +340,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: generic_adder_beh-beh File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/generic_adder_beh.vhd Line: 22
     Info (12023): Found entity 1: generic_adder_beh File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/generic_adder_beh.vhd Line: 9
 Info (12127): Elaborating entity "sev_top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at sev_top.vhd(34): object "enable" assigned a value but never read File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 34
-Warning (10541): VHDL Signal Declaration warning at sev_top.vhd(36): used implicit default value for signal "sum" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 36
-Warning (10631): VHDL Process Statement warning at sev_top.vhd(60): inferring latch(es) for signal or variable "sum_sig", which holds its previous value in one or more paths through the process File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 60
-Info (10041): Inferred latch for "sum_sig[0]" at sev_top.vhd(60) File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 60
-Info (10041): Inferred latch for "sum_sig[1]" at sev_top.vhd(60) File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 60
-Info (10041): Inferred latch for "sum_sig[2]" at sev_top.vhd(60) File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 60
-Info (10041): Inferred latch for "sum_sig[3]" at sev_top.vhd(60) File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 60
-Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:uut" File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 40
+Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:uut" File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 54
 Warning (10492): VHDL Process Statement warning at seven_seg.vhd(18): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/seven_seg.vhd Line: 18
-Info (12128): Elaborating entity "generic_counter" for hierarchy "generic_counter:uut2" File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 48
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seven_seg_out[0]" is stuck at GND File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 8
-    Warning (13410): Pin "seven_seg_out[1]" is stuck at GND File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 8
-    Warning (13410): Pin "seven_seg_out[2]" is stuck at GND File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 8
-    Warning (13410): Pin "seven_seg_out[6]" is stuck at VCC File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 8
+Info (12128): Elaborating entity "generic_counter" for hierarchy "generic_counter:uut2" File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 62
+Info (12128): Elaborating entity "generic_adder_beh" for hierarchy "generic_adder_beh:uut3" File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/sev_top.vhd Line: 72
+Warning (10540): VHDL Signal Declaration warning at generic_adder_beh.vhd(25): used explicit default value for signal "cin_guard" because signal was never assigned a value File: C:/Users/nickd/Git Docs/HDL-Class/Lab 3/BCD Sim/src/generic_adder_beh.vhd Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 52 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 3 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4947 megabytes
-    Info: Processing ended: Thu Sep 24 10:57:11 2026
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21061): Implemented 43 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4982 megabytes
+    Info: Processing ended: Thu Sep 24 14:28:54 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 
