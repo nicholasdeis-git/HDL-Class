@@ -13,7 +13,7 @@ end seven_seg;
 
 architecture beh of seven_seg is
 begin
-process(clk)
+process(clk,reset)
   begin 
     if (reset = '1') then 
       seven_seg_out <= "1111000";
