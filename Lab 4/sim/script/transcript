@@ -1,6 +1,7 @@
 # do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:06:46 on Oct 08,2026
+# Start time: 13:09:29 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -8,10 +9,10 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Top
 # -- Compiling architecture beh of Top
-# End time: 10:06:46 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:09:29 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:06:46 on Oct 08,2026
+# Start time: 13:09:29 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -19,11 +20,12 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_tb
 # -- Compiling architecture arch of top_tb
-# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:06:46 on Oct 08,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:09:30 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:06:46 on Oct 08,2026
+# Start time: 13:09:30 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -31,30 +33,30 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity seven_seg
 # -- Compiling architecture beh of seven_seg
-# End time: 10:06:46 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:09:30 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:06:46 on Oct 08,2026
+# Start time: 13:09:30 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity synchronizer_3bit
 # -- Compiling architecture beh of synchronizer_3bit
-# End time: 10:06:46 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:09:30 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:06:46 on Oct 08,2026
+# Start time: 13:09:30 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity rising_edge_synchronizer
 # -- Compiling architecture beh of rising_edge_synchronizer
-# End time: 10:06:46 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:09:30 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" top_tb 
-# Start time: 10:06:46 on Oct 08,2026
+# Start time: 13:09:30 on Oct 08,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -62,24 +64,17 @@
 # Loading work.top_tb(arch)
 # Loading work.top(beh)
 # Loading work.synchronizer_3bit(beh)
+# ** Warning: (vsim-3473) Component instance "uutArth : add_sub_beh" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
 # Loading work.seven_seg(beh)
-# ** Warning: (vsim-8683) Uninitialized out port /top_tb/uut/seven_seg3(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
 # ** Note: ****************** sequential testbench start ****************
 #    Time: 0 ps  Iteration: 0  Instance: /top_tb
-add wave  \
-sim:/top_tb/a \
-sim:/top_tb/b \
-sim:/top_tb/clk \
-sim:/top_tb/reset \
-sim:/top_tb/seven_seg1 \
-sim:/top_tb/seven_seg2 \
-sim:/top_tb/seven_seg3
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/nickd/Git Docs/HDL-Class/Lab 4/sim/script/wave.do}
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
 do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:08:14 on Oct 08,2026
+# Start time: 13:13:51 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -87,10 +82,10 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Top
 # -- Compiling architecture beh of Top
-# End time: 10:08:14 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:13:51 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:08:14 on Oct 08,2026
+# Start time: 13:13:51 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -98,11 +93,12 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_tb
 # -- Compiling architecture arch of top_tb
-# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:08:14 on Oct 08,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:13:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:08:14 on Oct 08,2026
+# Start time: 13:13:51 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -110,32 +106,291 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity seven_seg
 # -- Compiling architecture beh of seven_seg
-# End time: 10:08:14 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:13:51 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:08:14 on Oct 08,2026
+# Start time: 13:13:51 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity synchronizer_3bit
 # -- Compiling architecture beh of synchronizer_3bit
-# End time: 10:08:14 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:13:51 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:08:14 on Oct 08,2026
+# Start time: 13:13:51 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity rising_edge_synchronizer
 # -- Compiling architecture beh of rising_edge_synchronizer
-# End time: 10:08:14 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:13:51 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 10:08:15 on Oct 08,2026, Elapsed time: 0:01:29
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:13:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# ** Error: ../../src/add_sub_beh.vhd(18): near ")": (vcom-1576) expecting IDENTIFIER.
+# End time: 13:13:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 7
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/add_sub_beh.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:14:15 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:14:15 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:14:15 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:14:15 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:14:15 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:14:15 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:14:15 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:14:15 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:14:15 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:14:15 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:14:15 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:14:15 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:14:15 on Oct 08,2026, Elapsed time: 0:04:45
+# Errors: 4, Warnings: 5
+# vsim -voptargs="+acc" top_tb 
+# Start time: 13:14:15 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 4 (3 downto 0). Right is 5 (4 downto 0).
+#    Time: 0 ps  Iteration: 0  Process: /top_tb/uut/uutArth/line__26 File: ../../src/add_sub_beh.vhd
+# Fatal error in Process line__26 at ../../src/add_sub_beh.vhd line 31
+# 
+# HDL call sequence:
+# Stopped at ../../src/add_sub_beh.vhd 31 Process line__26
+# 
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:15:36 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:15:36 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:15:36 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:15:36 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:15:36 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:15:36 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:15:36 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:15:36 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:15:36 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:15:36 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:15:36 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:15:36 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:15:37 on Oct 08,2026, Elapsed time: 0:01:22
+# Errors: 2, Warnings: 2
+# vsim -voptargs="+acc" top_tb 
+# Start time: 13:15:37 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:16:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:16:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:16:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:16:30 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:30 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:16:30 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:16:30 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:16:30 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:16:30 on Oct 08,2026, Elapsed time: 0:00:53
 # Errors: 0, Warnings: 2
 # vsim -voptargs="+acc" top_tb 
-# Start time: 10:08:15 on Oct 08,2026
+# Start time: 13:16:30 on Oct 08,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -143,15 +398,21 @@ do sim.do
 # Loading work.top_tb(arch)
 # Loading work.top(beh)
 # Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
 # Loading work.seven_seg(beh)
-# ** Warning: (vsim-8683) Uninitialized out port /top_tb/uut/seven_seg3(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
 # ** Note: ****************** sequential testbench start ****************
 #    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 4 (3 downto 0). Right is 5 (4 downto 0).
+#    Time: 0 ps  Iteration: 0  Process: /top_tb/uut/uutArth/line__26 File: ../../src/add_sub_beh.vhd
+# Fatal error in Process line__26 at ../../src/add_sub_beh.vhd line 29
+# 
+# HDL call sequence:
+# Stopped at ../../src/add_sub_beh.vhd 29 Process line__26
+# 
 do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:09:40 on Oct 08,2026
+# Start time: 13:17:13 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -159,10 +420,10 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Top
 # -- Compiling architecture beh of Top
-# End time: 10:09:40 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:17:13 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:09:40 on Oct 08,2026
+# Start time: 13:17:13 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -170,11 +431,12 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_tb
 # -- Compiling architecture arch of top_tb
-# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:09:40 on Oct 08,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:17:13 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:09:40 on Oct 08,2026
+# Start time: 13:17:14 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -182,32 +444,43 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity seven_seg
 # -- Compiling architecture beh of seven_seg
-# End time: 10:09:40 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:17:14 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:09:40 on Oct 08,2026
+# Start time: 13:17:14 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity synchronizer_3bit
 # -- Compiling architecture beh of synchronizer_3bit
-# End time: 10:09:40 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:17:14 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:09:40 on Oct 08,2026
+# Start time: 13:17:14 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity rising_edge_synchronizer
 # -- Compiling architecture beh of rising_edge_synchronizer
-# End time: 10:09:40 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:17:14 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 10:09:40 on Oct 08,2026, Elapsed time: 0:01:25
-# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:17:14 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:17:14 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:17:14 on Oct 08,2026, Elapsed time: 0:00:44
+# Errors: 2, Warnings: 2
 # vsim -voptargs="+acc" top_tb 
-# Start time: 10:09:40 on Oct 08,2026
+# Start time: 13:17:14 on Oct 08,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -215,15 +488,16 @@ do sim.do
 # Loading work.top_tb(arch)
 # Loading work.top(beh)
 # Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
 # Loading work.seven_seg(beh)
-# ** Warning: (vsim-8683) Uninitialized out port /top_tb/uut/seven_seg3(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
 # ** Note: ****************** sequential testbench start ****************
 #    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
 do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:10:42 on Oct 08,2026
+# Start time: 13:18:10 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -231,10 +505,10 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Top
 # -- Compiling architecture beh of Top
-# End time: 10:10:42 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:18:10 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:10:42 on Oct 08,2026
+# Start time: 13:18:10 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -242,11 +516,12 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_tb
 # -- Compiling architecture arch of top_tb
-# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:10:42 on Oct 08,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:18:10 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:10:42 on Oct 08,2026
+# Start time: 13:18:10 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -254,32 +529,43 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity seven_seg
 # -- Compiling architecture beh of seven_seg
-# End time: 10:10:42 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:18:10 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:10:42 on Oct 08,2026
+# Start time: 13:18:10 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity synchronizer_3bit
 # -- Compiling architecture beh of synchronizer_3bit
-# End time: 10:10:42 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:18:10 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:10:42 on Oct 08,2026
+# Start time: 13:18:10 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity rising_edge_synchronizer
 # -- Compiling architecture beh of rising_edge_synchronizer
-# End time: 10:10:42 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:18:11 on Oct 08,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# End time: 10:10:43 on Oct 08,2026, Elapsed time: 0:01:03
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:18:11 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:18:11 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:18:11 on Oct 08,2026, Elapsed time: 0:00:57
 # Errors: 0, Warnings: 2
 # vsim -voptargs="+acc" top_tb 
-# Start time: 10:10:43 on Oct 08,2026
+# Start time: 13:18:11 on Oct 08,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -287,15 +573,21 @@ do sim.do
 # Loading work.top_tb(arch)
 # Loading work.top(beh)
 # Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
 # Loading work.seven_seg(beh)
-# ** Warning: (vsim-8683) Uninitialized out port /top_tb/uut/seven_seg3(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
 # ** Note: ****************** sequential testbench start ****************
 #    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 4 (3 downto 0). Right is 5 (4 downto 0).
+#    Time: 0 ps  Iteration: 0  Process: /top_tb/uut/uutArth/line__26 File: ../../src/add_sub_beh.vhd
+# Fatal error in Process line__26 at ../../src/add_sub_beh.vhd line 29
+# 
+# HDL call sequence:
+# Stopped at ../../src/add_sub_beh.vhd 29 Process line__26
+# 
 do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:11:55 on Oct 08,2026
+# Start time: 13:20:06 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -303,10 +595,10 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Top
 # -- Compiling architecture beh of Top
-# End time: 10:11:55 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:20:06 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:11:55 on Oct 08,2026
+# Start time: 13:20:06 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -314,11 +606,12 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_tb
 # -- Compiling architecture arch of top_tb
-# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:11:55 on Oct 08,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:20:06 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:11:55 on Oct 08,2026
+# Start time: 13:20:06 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -326,48 +619,49 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity seven_seg
 # -- Compiling architecture beh of seven_seg
-# End time: 10:11:55 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:20:06 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:11:55 on Oct 08,2026
+# Start time: 13:20:06 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity synchronizer_3bit
 # -- Compiling architecture beh of synchronizer_3bit
-# End time: 10:11:55 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:20:06 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:11:55 on Oct 08,2026
+# Start time: 13:20:06 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity rising_edge_synchronizer
 # -- Compiling architecture beh of rising_edge_synchronizer
-# End time: 10:11:55 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:20:06 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 10:11:56 on Oct 08,2026, Elapsed time: 0:01:13
-# Errors: 0, Warnings: 2
-# vsim -voptargs="+acc" top_tb 
-# Start time: 10:11:56 on Oct 08,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.top_tb(arch)
-# Loading work.top(beh)
-# Loading work.synchronizer_3bit(beh)
-# Loading work.seven_seg(beh)
-# ** Warning: (vsim-8683) Uninitialized out port /top_tb/uut/seven_seg3(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
-# ** Note: ****************** sequential testbench start ****************
-#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:20:06 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# ** Error: ../../src/add_sub_beh.vhd(16): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/add_sub_beh.vhd(19): VHDL Compiler exiting
+# End time: 13:20:06 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 7
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/add_sub_beh.vhd"
 do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:13:10 on Oct 08,2026
+# Start time: 13:21:17 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -375,10 +669,10 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Top
 # -- Compiling architecture beh of Top
-# End time: 10:13:10 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:21:17 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:13:10 on Oct 08,2026
+# Start time: 13:21:17 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -386,11 +680,12 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_tb
 # -- Compiling architecture arch of top_tb
-# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:13:11 on Oct 08,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 1
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:21:17 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:13:11 on Oct 08,2026
+# Start time: 13:21:17 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -398,48 +693,49 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity seven_seg
 # -- Compiling architecture beh of seven_seg
-# End time: 10:13:11 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:21:17 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:13:11 on Oct 08,2026
+# Start time: 13:21:17 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity synchronizer_3bit
 # -- Compiling architecture beh of synchronizer_3bit
-# End time: 10:13:11 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:21:17 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:13:11 on Oct 08,2026
+# Start time: 13:21:17 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity rising_edge_synchronizer
 # -- Compiling architecture beh of rising_edge_synchronizer
-# End time: 10:13:11 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:21:18 on Oct 08,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# End time: 10:13:11 on Oct 08,2026, Elapsed time: 0:01:15
-# Errors: 0, Warnings: 2
-# vsim -voptargs="+acc" top_tb 
-# Start time: 10:13:11 on Oct 08,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.top_tb(arch)
-# Loading work.top(beh)
-# Loading work.synchronizer_3bit(beh)
-# Loading work.seven_seg(beh)
-# ** Warning: (vsim-8683) Uninitialized out port /top_tb/uut/seven_seg3(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
-# ** Note: ****************** sequential testbench start ****************
-#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:21:18 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# ** Error: ../../src/add_sub_beh.vhd(16): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../../src/add_sub_beh.vhd(19): VHDL Compiler exiting
+# End time: 13:21:18 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 7
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/add_sub_beh.vhd"
 do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:14:41 on Oct 08,2026
+# Start time: 13:21:23 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -447,10 +743,10 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Top
 # -- Compiling architecture beh of Top
-# End time: 10:14:41 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 13:21:23 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:14:41 on Oct 08,2026
+# Start time: 13:21:23 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -458,12 +754,829 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_tb
 # -- Compiling architecture arch of top_tb
-# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: ../src/top_tb.vhd(60): (vcom-1136) Unknown identifier "period".
-# ** Error: ../src/top_tb.vhd(60): Type error resolving infix expression "*" as type std.STANDARD.TIME.
-# ** Error: ../src/top_tb.vhd(77): VHDL Compiler exiting
-# End time: 10:14:41 on Oct 08,2026, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 1
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:21:23 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:21:23 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:21:23 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:21:23 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:21:23 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:21:23 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:21:23 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:21:23 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# ** Error (suppressible): ../../src/add_sub_beh.vhd(16): (vcom-1272) Length of expected is 2; length of actual is 1.
+# ** Error: ../../src/add_sub_beh.vhd(19): VHDL Compiler exiting
+# End time: 13:21:24 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 7
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/add_sub_beh.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:46 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:22:46 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:46 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:22:46 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:46 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:22:46 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:46 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:22:47 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:47 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:22:47 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:47 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# ** Error (suppressible): ../../src/add_sub_beh.vhd(16): (vcom-1272) Length of expected is 2; length of actual is 1.
+# ** Error: ../../src/add_sub_beh.vhd(19): VHDL Compiler exiting
+# End time: 13:22:47 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 7
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/add_sub_beh.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:57 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:22:57 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:22:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:22:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:22:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:22:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:22:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:22:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:22:58 on Oct 08,2026, Elapsed time: 0:04:47
+# Errors: 20, Warnings: 10
+# vsim -voptargs="+acc" top_tb 
+# Start time: 13:22:58 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:23:48 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:23:48 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:23:48 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:23:48 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:23:48 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:23:48 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:23:48 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:23:49 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:23:49 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:23:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:23:49 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:23:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:23:49 on Oct 08,2026, Elapsed time: 0:00:51
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" top_tb 
+# Start time: 13:23:49 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 4 (3 downto 0). Right is 5 (4 downto 0).
+#    Time: 0 ps  Iteration: 0  Process: /top_tb/uut/uutArth/line__26 File: ../../src/add_sub_beh.vhd
+# Fatal error in Process line__26 at ../../src/add_sub_beh.vhd line 29
+# 
+# HDL call sequence:
+# Stopped at ../../src/add_sub_beh.vhd 29 Process line__26
+# 
+add wave -position insertpoint  \
+sim:/top_tb/uut/a \
+sim:/top_tb/uut/b \
+sim:/top_tb/uut/clk \
+sim:/top_tb/uut/reset \
+sim:/top_tb/uut/seven_seg1 \
+sim:/top_tb/uut/seven_seg2 \
+sim:/top_tb/uut/seven_seg3 \
+sim:/top_tb/uut/a_sync \
+sim:/top_tb/uut/b_sync \
+sim:/top_tb/uut/a_pad \
+sim:/top_tb/uut/b_pad \
+sim:/top_tb/uut/result \
+sim:/top_tb/uut/flag
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:25:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:25:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:25:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:25:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:25:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:25:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:25:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:25:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:25:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:25:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:25:58 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:25:58 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:25:59 on Oct 08,2026, Elapsed time: 0:02:10
+# Errors: 2, Warnings: 2
+# vsim -voptargs="+acc" top_tb 
+# Start time: 13:25:59 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:27:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:27:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:27:30 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:27:30 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:27:30 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:27:30 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:27:30 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:27:30 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:27:30 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:27:30 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:27:30 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:27:30 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:27:30 on Oct 08,2026, Elapsed time: 0:01:31
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" top_tb 
+# Start time: 13:27:30 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:29:43 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:29:43 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:29:43 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:29:43 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:29:43 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:29:43 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:29:43 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:29:43 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:29:43 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:29:43 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:29:43 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:29:43 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:29:44 on Oct 08,2026, Elapsed time: 0:02:14
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" top_tb 
+# Start time: 13:29:44 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+add wave -position insertpoint  \
+sim:/top_tb/uut/a_pad \
+sim:/top_tb/uut/b_pad \
+sim:/top_tb/uut/result \
+sim:/top_tb/uut/flag
+add wave -position insertpoint  \
+sim:/top_tb/uut/a_pad \
+sim:/top_tb/uut/b_pad \
+sim:/top_tb/uut/result \
+sim:/top_tb/uut/flag
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:38:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:38:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:38:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:38:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:38:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:38:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:38:06 on Oct 08,2026, Elapsed time: 0:08:22
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" top_tb 
+# Start time: 13:38:06 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+add wave -position insertpoint  \
+sim:/top_tb/uut/seven_seg3 \
+sim:/top_tb/uut/a_pad \
+sim:/top_tb/uut/b_pad \
+sim:/top_tb/uut/result \
+sim:/top_tb/uut/flag
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:18 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 13:41:18 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:18 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:41:18 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:18 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 13:41:18 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:18 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 13:41:18 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:18 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 13:41:18 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:18 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 13:41:18 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:41:19 on Oct 08,2026, Elapsed time: 0:03:13
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" top_tb 
+# Start time: 13:41:19 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+add wave -position insertpoint  \
+sim:/top_tb/uut/seven_seg3 \
+sim:/top_tb/uut/a_pad \
+sim:/top_tb/uut/b_pad \
+sim:/top_tb/uut/result \
+sim:/top_tb/uut/flag
+add wave -position insertpoint  \
+sim:/top_tb/uut/seven_seg3 \
+sim:/top_tb/uut/a_pad \
+sim:/top_tb/uut/b_pad \
+sim:/top_tb/uut/result \
+sim:/top_tb/uut/flag
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:30 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# ** Error: ../../src/Top.vhd(97): near "flag": (vcom-1576) expecting ',' or ')'.
+# ** Error: ../../src/Top.vhd(100): Statement cannot be labeled.
+# ** Error: ../../src/Top.vhd(131): VHDL Compiler exiting
+# End time: 14:11:30 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/Top.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:55 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:11:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:55 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error: ../src/top_tb.vhd(62): (vcom-1035) Formal port "add_btn" has OPEN or no actual associated with it.
+# ** Error: ../src/top_tb.vhd(62): (vcom-1035) Formal port "sub_btn" has OPEN or no actual associated with it.
+# ** Error: ../src/top_tb.vhd(76): (vcom-1581) No feasible entries for infix operator '<='.
+# ** Error: ../src/top_tb.vhd(76): Type error resolving infix expression "<=" as type std.STANDARD.BOOLEAN.
+# ** Error: ../src/top_tb.vhd(77): Illegal target for signal assignment.
+# ** Error: ../src/top_tb.vhd(77): (vcom-1136) Unknown identifier "add_btn".
+# ** Error: ../src/top_tb.vhd(78): near "sub_btn": (vcom-1576) expecting ';'.
+# ** Error: ../src/top_tb.vhd(87): near "process": (vcom-1576) expecting LOOP.
+# End time: 14:11:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 2
 # ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
 # Error in macro ./sim.do line 3
 # C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
@@ -472,7 +1585,7 @@ do sim.do
 do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:15 on Oct 08,2026
+# Start time: 14:13:07 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -480,10 +1593,10 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Top
 # -- Compiling architecture beh of Top
-# End time: 10:15:15 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 14:13:07 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:15 on Oct 08,2026
+# Start time: 14:13:07 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -491,61 +1604,22 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_tb
 # -- Compiling architecture arch of top_tb
-# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: ../src/top_tb.vhd(60): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:15:15 on Oct 08,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:15 on Oct 08,2026
-# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity seven_seg
-# -- Compiling architecture beh of seven_seg
-# End time: 10:15:15 on Oct 08,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:15 on Oct 08,2026
-# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity synchronizer_3bit
-# -- Compiling architecture beh of synchronizer_3bit
-# End time: 10:15:15 on Oct 08,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:15 on Oct 08,2026
-# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity rising_edge_synchronizer
-# -- Compiling architecture beh of rising_edge_synchronizer
-# End time: 10:15:16 on Oct 08,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# End time: 10:15:16 on Oct 08,2026, Elapsed time: 0:02:05
-# Errors: 6, Warnings: 4
-# vsim -voptargs="+acc" top_tb 
-# Start time: 10:15:16 on Oct 08,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.top_tb(arch)
-# Loading work.top(beh)
-# Loading work.synchronizer_3bit(beh)
-# Loading work.seven_seg(beh)
-# ** Warning: (vsim-8683) Uninitialized out port /top_tb/uut/seven_seg3(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
-# ** Note: ****************** sequential testbench start ****************
-#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error: ../src/top_tb.vhd(62): (vcom-1035) Formal port "add_btn" has OPEN or no actual associated with it.
+# ** Error: ../src/top_tb.vhd(62): (vcom-1035) Formal port "sub_btn" has OPEN or no actual associated with it.
+# ** Error: ../src/top_tb.vhd(79): VHDL Compiler exiting
+# End time: 14:13:07 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 2
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 3
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/top_tb.vhd"
 do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:17:03 on Oct 08,2026
+# Start time: 14:14:14 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -553,10 +1627,10 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Top
 # -- Compiling architecture beh of Top
-# End time: 10:17:03 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 14:14:14 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:17:03 on Oct 08,2026
+# Start time: 14:14:14 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -564,12 +1638,80 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_tb
 # -- Compiling architecture arch of top_tb
-# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: ../src/top_tb.vhd(60): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:17:03 on Oct 08,2026, Elapsed time: 0:00:00
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error: ../src/top_tb.vhd(64): (vcom-1035) Formal port "add_btn" has OPEN or no actual associated with it.
+# ** Error: ../src/top_tb.vhd(64): (vcom-1035) Formal port "sub_btn" has OPEN or no actual associated with it.
+# ** Error: ../src/top_tb.vhd(81): VHDL Compiler exiting
+# End time: 14:14:14 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 2
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 3
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/top_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:02 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:15:02 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:02 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error: ../src/top_tb.vhd(58): near "sub_btn": (vcom-1576) expecting ',' or ')'.
+# ** Error: ../src/top_tb.vhd(66): Statement cannot be labeled.
+# ** Error: ../src/top_tb.vhd(81): VHDL Compiler exiting
+# End time: 14:15:02 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 2
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 3
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/top_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:13 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:15:13 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:13 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:15:14 on Oct 08,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 2
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:17:04 on Oct 08,2026
+# Start time: 14:15:14 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -577,32 +1719,53 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity seven_seg
 # -- Compiling architecture beh of seven_seg
-# End time: 10:17:04 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 14:15:14 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:17:04 on Oct 08,2026
+# Start time: 14:15:14 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity synchronizer_3bit
 # -- Compiling architecture beh of synchronizer_3bit
-# End time: 10:17:04 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 14:15:14 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:17:04 on Oct 08,2026
+# Start time: 14:15:14 on Oct 08,2026
 # vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity rising_edge_synchronizer
 # -- Compiling architecture beh of rising_edge_synchronizer
-# End time: 10:17:04 on Oct 08,2026, Elapsed time: 0:00:00
+# End time: 14:15:14 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 10:17:04 on Oct 08,2026, Elapsed time: 0:01:48
-# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:14 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:15:14 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:15:14 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:15:14 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:15:15 on Oct 08,2026, Elapsed time: 0:33:56
+# Errors: 35, Warnings: 10
 # vsim -voptargs="+acc" top_tb 
-# Start time: 10:17:04 on Oct 08,2026
+# Start time: 14:15:15 on Oct 08,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -610,8 +1773,1523 @@ do sim.do
 # Loading work.top_tb(arch)
 # Loading work.top(beh)
 # Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
 # Loading work.seven_seg(beh)
-# ** Warning: (vsim-8683) Uninitialized out port /top_tb/uut/seven_seg3(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
 # ** Note: ****************** sequential testbench start ****************
 #    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:27:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:27:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:27:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:27:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:27:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:27:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:27:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:27:52 on Oct 08,2026, Elapsed time: 0:12:37
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:27:52 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:30:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:30:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:30:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:30:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:30:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:29 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:30:30 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:30 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# ** Error: ../../src/flag_set.vhd(22): (vcom-1136) Unknown identifier "add_btn".
+# ** Error: ../../src/flag_set.vhd(22): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+# ** Error: ../../src/flag_set.vhd(24): (vcom-1136) Unknown identifier "sub_btn".
+# ** Error: ../../src/flag_set.vhd(24): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+# ** Error: ../../src/flag_set.vhd(30): VHDL Compiler exiting
+# End time: 14:30:30 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 8
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/flag_set.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:55 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:30:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:55 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:30:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:55 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:30:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:55 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:30:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:55 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:30:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:55 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:30:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:55 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:30:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:30:56 on Oct 08,2026, Elapsed time: 0:03:04
+# Errors: 8, Warnings: 5
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:30:56 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:31:46 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:31:46 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:31:46 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:31:46 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:31:46 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:31:46 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:31:46 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:31:47 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:31:47 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:31:47 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:31:47 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:31:47 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:31:47 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:31:47 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:31:48 on Oct 08,2026, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:31:48 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+add wave -position insertpoint  \
+sim:/top_tb/uut/a \
+sim:/top_tb/uut/b \
+sim:/top_tb/uut/add_btn \
+sim:/top_tb/uut/sub_btn \
+sim:/top_tb/uut/clk \
+sim:/top_tb/uut/reset \
+sim:/top_tb/uut/seven_seg1 \
+sim:/top_tb/uut/seven_seg2 \
+sim:/top_tb/uut/seven_seg3 \
+sim:/top_tb/uut/a_sync \
+sim:/top_tb/uut/b_sync \
+sim:/top_tb/uut/a_pad \
+sim:/top_tb/uut/b_pad \
+sim:/top_tb/uut/result \
+sim:/top_tb/uut/flag \
+sim:/top_tb/uut/add_en \
+sim:/top_tb/uut/sub_en
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/nickd/Git Docs/HDL-Class/Lab 4/sim/script/wave.do}
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:34:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:34:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:34:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:34:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:34:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:34:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:05 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:34:05 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:34:06 on Oct 08,2026, Elapsed time: 0:02:18
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:34:06 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:35:18 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# ** Error: ../../src/Top.vhd(73): Integer literal 1 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: ../../src/Top.vhd(158): VHDL Compiler exiting
+# End time: 14:35:18 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/Top.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:35:28 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:35:28 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:35:28 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:35:28 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:35:28 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:35:28 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:35:28 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:35:28 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:35:28 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:35:28 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:35:28 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:35:28 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:35:28 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:35:28 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:35:29 on Oct 08,2026, Elapsed time: 0:01:23
+# Errors: 5, Warnings: 3
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:35:29 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:38 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:37:38 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:38 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(42): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:37:39 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:39 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:37:39 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:39 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:37:39 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:39 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:37:39 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:39 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:37:39 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:39 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:37:39 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:37:40 on Oct 08,2026, Elapsed time: 0:02:11
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:37:40 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:27 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:40:27 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:27 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:40:27 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:27 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:40:27 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:27 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:40:27 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:27 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:40:27 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:27 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:40:27 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:27 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:40:27 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:40:28 on Oct 08,2026, Elapsed time: 0:02:48
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:40:28 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:06 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:49:06 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:06 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:49:06 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:06 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:49:06 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:06 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:49:06 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:06 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:49:06 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:06 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:49:06 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:06 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:49:06 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:49:07 on Oct 08,2026, Elapsed time: 0:08:39
+# Errors: 0, Warnings: 4
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:49:07 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:00 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:50:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:00 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:50:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:00 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:50:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:00 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:50:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:00 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:50:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:00 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:50:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:00 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:50:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:50:01 on Oct 08,2026, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:50:01 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:49 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:50:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:49 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:50:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:49 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:50:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:49 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:50:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:49 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:50:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:49 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:50:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:49 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:50:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:50:50 on Oct 08,2026, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:50:50 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:31 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:53:32 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:32 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:53:32 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:32 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:53:32 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:32 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:53:32 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:32 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:53:32 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:32 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:53:32 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:32 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:53:32 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:53:33 on Oct 08,2026, Elapsed time: 0:02:43
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:53:33 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:57:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 14:57:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:57:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:57:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:57:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 14:57:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:57:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 14:57:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:57:51 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:57:52 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:57:52 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 14:57:52 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:57:52 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_ctrl_beh
+# -- Compiling architecture beh of flag_ctrl_beh
+# End time: 14:57:52 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:57:53 on Oct 08,2026, Elapsed time: 0:04:20
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" top_tb 
+# Start time: 14:57:53 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# ** Warning: (vsim-3473) Component instance "uutFlag : flag_set" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut File: ../../src/Top.vhd
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:04:31 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 15:04:31 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:04:31 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 15:04:31 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:04:31 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 15:04:31 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:04:31 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 15:04:31 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:04:31 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 15:04:32 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:04:32 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 15:04:32 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:04:32 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_set
+# -- Compiling architecture beh of flag_set
+# End time: 15:04:32 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:04:33 on Oct 08,2026, Elapsed time: 0:06:40
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" top_tb 
+# Start time: 15:04:33 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.flag_set(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:52 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Top
+# -- Compiling architecture beh of Top
+# End time: 15:16:52 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:52 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(54): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/top_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 15:16:52 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:52 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 15:16:53 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:53 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 15:16:53 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:53 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 15:16:53 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:53 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub_beh
+# -- Compiling architecture beh of add_sub_beh
+# End time: 15:16:53 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:16:53 on Oct 08,2026
+# vcom -reportprogress 300 -93 -work work ../../src/flag_set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flag_set
+# -- Compiling architecture beh of flag_set
+# End time: 15:16:53 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:16:54 on Oct 08,2026, Elapsed time: 0:12:21
+# Errors: 0, Warnings: 4
+# vsim -voptargs="+acc" top_tb 
+# Start time: 15:16:54 on Oct 08,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(arch)
+# Loading work.top(beh)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.add_sub_beh(beh)
+# Loading work.flag_set(beh)
+# Loading work.seven_seg(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 3330 ns  Iteration: 0  Instance: /top_tb
+# End time: 15:28:43 on Oct 08,2026, Elapsed time: 0:11:49
+# Errors: 0, Warnings: 0
