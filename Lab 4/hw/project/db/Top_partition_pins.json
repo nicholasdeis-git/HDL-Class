@@ -1,0 +1,133 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "seven_seg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_seg3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "add_btn",
+					"strict" : false
+				},
+				{
+					"name" : "sub_btn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
